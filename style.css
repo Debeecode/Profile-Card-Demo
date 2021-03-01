@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url("profile-card-component-main/images/bg-pattern-top.svg")
+      no-repeat -250px -500px fixed,
+    url("profile-card-component-main/images/bg-pattern-bottom.svg") no-repeat
+      600px 300px fixed;
+  background-color: #1ea2ad;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 15px;
+  box-shadow: 10px 10px 26px #18858f, -10px -10px 26px #18858f;
+  opacity: 0;
+  animation-name: pop;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+span {
+  color: #888;
+}
+
+.pattern {
+  width: 100%;
+  background: url("profile-card-component-main/images/bg-pattern-card.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 125px;
+  position: relative;
+}
+
+.img {
+  margin: auto;
+  position: absolute;
+  top: 80px;
+}
+
+.img img {
+  border-radius: 50%;
+  width: 80px;
+  border: 5px solid #fff;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.img img:hover {
+  transform: rotateY(180deg);
+}
+
+.profile {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px 0 22px;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: 0.8rem;
+}
+
+h1 span {
+  padding-left: 0.5rem;
+}
+
+.profile p {
+  font-size: 0.8rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.num {
+  font-weight: 800;
+}
+
+.tag {
+  font-size: 0.7rem;
+}
+
+.attribution {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 0.7rem;
+  padding-bottom: 7px;
+}
+
+.attribution span {
+  color: #000;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url("profile-card-component-main/images/bg-pattern-top.svg")
+        no-repeat -700px -500px fixed,
+      url("profile-card-component-main/images/bg-pattern-bottom.svg") no-repeat
+        100px 300px fixed;
+    background-color: #1ea2ad;
+  }
+}
